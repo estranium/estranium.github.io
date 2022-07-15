@@ -1,7 +1,7 @@
 function tapMe(){
 	taps = localStorage.getItem('taps');
 	if(taps != null){
-		taps++;
+		taps+=100;
 	} else {
 		taps = 1;
 	}
