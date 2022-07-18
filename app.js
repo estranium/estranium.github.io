@@ -23,11 +23,11 @@ function calc(str){
 }
 function buttonClick(ev){
 	
-	cmd = ev.target.innerText
+	var cmd = ev.target.innerText
 	//hist = h.value
 	//result = r.value
-	hist = h.innerText
-	result = r.innerText
+	var hist = h.innerText
+	var result = r.innerText
 	
 	//alert(cmd)
 	switch(cmd){
@@ -124,7 +124,7 @@ var newDig = false
 var newCalc = true
 
 
-for(i=0;i<t.length;i++){
+for(var i=0;i<t.length;i++){
 	//t[i].innerText
 	t[i].addEventListener("click",buttonClick)
 }
