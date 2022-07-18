@@ -17,8 +17,25 @@ if(taps == null){
 //document.getElementById("button").addEventListener('click',tapMe)
 
 function calc(str){
-	//arr = str.replaceAll(/[\+\-\*\/]/ig," $& ")
-	return Number(eval(str).toFixed(10))
+		var res
+		res = str.replaceAll(/[\+\-\*\/]/ig," $& ").split(" ")
+		while(idx = res.indexOf("*"),idx>0){
+		    res.splice(idx-1,3,bigDecimal.multiply(res[idx-1],res[idx+1]))
+		}
+		while(idx = res.indexOf("/"),idx>0){
+		    res.splice(idx-1,3,bigDecimal.divide(res[idx-1],res[idx+1]))
+		}
+		while(idx = res.indexOf("-"),idx>0){
+		    res.splice(idx-1,3,bigDecimal.subtract(res[idx-1],res[idx+1]))
+		}
+		while(idx = res.indexOf("+"),idx>0){
+		    res.splice(idx-1,3,bigDecimal.add(res[idx-1],res[idx+1]))
+		}
+		res = res[0]
+		idx = res.length
+		while(res[idx-1] == '0'){idx--}
+		res = res.slice(0,idx)
+	return res
 }
 function buttonClick(ev){
 	
