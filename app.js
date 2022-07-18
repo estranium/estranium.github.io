@@ -110,7 +110,7 @@ function buttonClick(ev){
 	//r.value = result
 	h.innerText = hist
 	r.innerText = result
-	log.innerText = "lastCmd " + lastCmd + "; newDig " + newDig + "; newCalc " + newCalc
+	//log.innerText = "lastCmd " + lastCmd + "; newDig " + newDig + "; newCalc " + newCalc
 }
 var t = document.getElementById("table").getElementsByTagName("td")
 var r = document.getElementById("result")
