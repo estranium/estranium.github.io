@@ -17,7 +17,7 @@ if(taps == null){
 //document.getElementById("button").addEventListener('click',tapMe)
 
 function calc(str){
-	arr = hist.replaceAll(/[\+\-\*\/]/ig," $& ")
+	//arr = str.replaceAll(/[\+\-\*\/]/ig," $& ")
 	result = Number(eval(str).toFixed(15))
 	return result
 }
