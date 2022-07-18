@@ -17,9 +17,7 @@ if(taps == null){
 //document.getElementById("button").addEventListener('click',tapMe)
 
 function calc(str){
-	//arr = str.replaceAll(/[\+\-\*\/]/ig," $& ")
-	result = Number(eval(str).toFixed(15))
-	return result
+	return Number(eval(str).toFixed(15))
 }
 function buttonClick(ev){
 	
