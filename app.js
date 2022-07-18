@@ -113,15 +113,15 @@ function buttonClick(ev){
 	r.innerText = result
 	log.innerText = "lastCmd " + lastCmd + "; newDig " + newDig + "; newCalc " + newCalc
 }
-t = document.getElementById("table").getElementsByTagName("td")
-r = document.getElementById("result")
-h = document.getElementById("history")
-log = document.getElementById("log")
-reload = document.getElementById("reload")
+var t = document.getElementById("table").getElementsByTagName("td")
+var r = document.getElementById("result")
+var h = document.getElementById("history")
+var log = document.getElementById("log")
+var reload = document.getElementById("reload")
 
-lastCmd = false
-newDig = false
-newCalc = true
+var lastCmd = false
+var newDig = false
+var newCalc = true
 
 
 for(i=0;i<t.length;i++){
