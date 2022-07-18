@@ -19,6 +19,7 @@ if(taps == null){
 function calc(str){
 		var res
 		res = str.replaceAll(/[\+\-\*\/]/ig," $& ").split(" ")
+		var idx
 		while(idx = res.indexOf("*"),idx>0){
 		    res.splice(idx-1,3,bigDecimal.multiply(res[idx-1],res[idx+1]))
 		}
