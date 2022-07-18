@@ -18,7 +18,7 @@ if(taps == null){
 
 function calc(str){
 	//arr = str.replaceAll(/[\+\-\*\/]/ig," $& ")
-	return Number(eval(str).toFixed(15))
+	return Number(eval(str).toFixed(10))
 }
 function buttonClick(ev){
 	
