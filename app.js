@@ -18,6 +18,7 @@ if(taps == null){
 
 function calc(str){
 		var res
+		str = str.replaceAll(/[ ]/ig,"")
 		res = str.replaceAll(/[\+\-\*\/]/ig," $& ").split(" ")
 		var idx
 		while(idx = res.indexOf("*"),idx>0){
@@ -34,8 +35,10 @@ function calc(str){
 		}
 		res = res[0]
 		idx = res.length
-		while(res[idx-1] == '0'){idx--}
+		var dot = res.indexOf(".")
+		while((dot>0) && (idx>dot) && ((res[idx-1] == '0') || (res[idx-1] == '.'))) {idx--}
 		res = res.slice(0,idx)
+		res = bigDecimal.getPrettyValue(res,3," ")
 	return res
 }
 function buttonClick(ev){
