@@ -19,6 +19,9 @@ if(taps == null){
 function calc(str){
 		var res
 		str = str.replaceAll(/[ ]/ig,"")
+		if(str[str.lenth-1]=='.'){
+		    str = str.slice(0,-1)
+		}
 		res = str.replaceAll(/[\+\-\*\/]/ig," $& ").split(" ")
 		var idx
 		while(idx = res.indexOf("*"),idx>0){
@@ -121,7 +124,10 @@ function buttonClick(ev){
 				}
 				newDig = false
 			}
-			result = calc(result + cmd)
+			result = result + cmd
+			if(cmd != "."){
+				result = calc(result)
+			}
 			lastCmd = false
 			
 			//r.focus()
