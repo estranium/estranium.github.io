@@ -61,7 +61,8 @@ function buttonClick(ev){
 			break;
 		}
 		case "BS":{
-			result = result.slice(0,-1);
+			result = calc(result.slice(0,-1));
+			
 			if(result == ""){
 				result = "0"
 			}
@@ -120,7 +121,7 @@ function buttonClick(ev){
 				}
 				newDig = false
 			}
-			result = result + cmd
+			result = calc(result + cmd)
 			lastCmd = false
 			
 			//r.focus()
