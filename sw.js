@@ -81,7 +81,7 @@ self.addEventListener('install', (event) => {
       '/app.js',
       '/apple-touch-icon.png',
       '/favicon.png',
-      '/launch.png',
+      '/js-big-decimal.min.js',
     ])
   );
 });
