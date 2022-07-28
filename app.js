@@ -172,6 +172,8 @@ if(mql.matches) {
 	mqlVal = "Land not match"
 }
 
+log.innerText = angle + "|" + mqlVal
+
 // Add a media query change listener
 mql.addListener(function(m) {
     if(m.matches) {
