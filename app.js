@@ -159,6 +159,36 @@ reload.addEventListener("click",function(){location.reload()})
 
 
 
+var angle
+var mqlVal
+var mql = window.matchMedia("(orientation: portrait)");
+
+// If there are matches, we're in portrait
+if(mql.matches) {
+    // Portrait orientation
+	mqlVal = "Port match"
+} else {  
+    // Landscape orientation
+	mqlVal = "Land not match"
+}
+
+// Add a media query change listener
+mql.addListener(function(m) {
+    if(m.matches) {
+        // Changed to portrait
+		mqlVal = "Port match"
+    }
+    else {
+        // Changed to landscape
+		mqlVal = "Land not match"
+    }
+	log.innerText = angle + "|" + mqlVal
+});
+window.addEventListener("orientationchange",(event) => {
+	angle = event.target.screen.orientation.angle
+	log.innerText = angle + "|" + mqlVal
+});
+
 const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
