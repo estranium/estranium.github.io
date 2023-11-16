@@ -161,7 +161,7 @@ window.addEventListener('load', function() {
     
     for(var i=0;i<t.length;i++){
     	//t[i].innerText
-    	t[i].addEventListener("touchend",buttonClick)
+    	t[i].addEventListener("click",buttonClick)
     }
     reload.addEventListener("click",function(){location.reload()})
     
