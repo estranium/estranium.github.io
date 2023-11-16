@@ -153,7 +153,7 @@ var newCalc = true
 
 for(var i=0;i<t.length;i++){
 	//t[i].innerText
-	t[i].addEventListener("click",buttonClick)
+	t[i].addEventListener("touchend",buttonClick)
 }
 reload.addEventListener("click",function(){location.reload()})
 
