@@ -133,6 +133,11 @@ OTHER DEALINGS IN THE SOFTWARE.
 		 */
 		this.tapTimeout = options.tapTimeout || 700;
 
+		console.log('tapDelay');
+		console.log(this.tapDelay);
+		console.log('tapTimeout');
+		console.log(this.tapTimeout);
+
 		if (FastClick.notNeeded(layer)) {
 			return;
 		}
