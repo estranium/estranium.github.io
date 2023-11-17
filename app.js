@@ -1,11 +1,18 @@
 window.addEventListener('load', function() {
 
+		    console.log('before --');
     if ('addEventListener' in document) {
+        
+		    console.log('before ---');
     	document.addEventListener('DOMContentLoaded', function() {
             // Touchmove boundary, beyond which a click will be cancelled.
             // The minimum time between tap(touchstart and touchend) events
             // The maximum time for a tap
+            
+		    console.log('before FC');
     		FastClick.attach(document.body, {tapDelay: 700, tapTimeout: 1400});
+            
+		    console.log('after');
     	}, false);
     }
     
