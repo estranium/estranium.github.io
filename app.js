@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
             // The maximum time for a tap
             
 		    console.log('before FC');
-    		FastClick.attach(document.body, {tapDelay: 700, tapTimeout: 1400});
+    		FastClick.attach(document.body, {tapDelay: 10, tapTimeout: 500});
             
 		    console.log('after');
     	// }, false);
